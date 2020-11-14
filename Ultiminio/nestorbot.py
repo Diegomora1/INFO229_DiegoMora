@@ -23,8 +23,7 @@ class NestorBot:
         #Consulta hacia la base de datos de citaciones para extraer una muestra aleatoria
         var = [{'$sample':{'size':1}}]
         results = col.aggregate(var)
-
-	text=" "
+        text=""
         for doc in results:
             text=doc["text"]
 
